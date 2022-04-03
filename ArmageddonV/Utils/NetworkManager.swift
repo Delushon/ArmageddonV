@@ -8,7 +8,7 @@
 import Foundation
 
 class NetworkManager {
-    func getAsteroids(startDate: Date, endDate: Date) {
+    static func getAsteroids(startDate: Date, endDate: Date) {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
@@ -18,7 +18,7 @@ class NetworkManager {
                 if let data = try? Data(contentsOf: url) {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                        JSONParsing.getAsteroidsFromJSON(json)
+                        DataManager.asteroids.append(contentsOf: JSONParsing.getAsteroidsFromJSON(json))
                     } catch {
                         print(error)
                     }

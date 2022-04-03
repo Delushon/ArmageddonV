@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112EC1DD27F9C648009E6260 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1DC27F9C648009E6260 /* DataManager.swift */; };
+		112EC1E127F9CB3F009E6260 /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1DF27F9CB3F009E6260 /* AsteroidCell.swift */; };
+		112EC1E227F9CB3F009E6260 /* AsteroidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112EC1E027F9CB3F009E6260 /* AsteroidCell.xib */; };
 		117FB6A327F6232B00B2DB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A227F6232B00B2DB17 /* AppDelegate.swift */; };
 		117FB6A527F6232B00B2DB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A427F6232B00B2DB17 /* SceneDelegate.swift */; };
-		117FB6A727F6232B00B2DB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A627F6232B00B2DB17 /* ViewController.swift */; };
+		117FB6A727F6232B00B2DB17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A627F6232B00B2DB17 /* HomeViewController.swift */; };
 		117FB6AA27F6232B00B2DB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117FB6A827F6232B00B2DB17 /* Main.storyboard */; };
 		117FB6AD27F6232B00B2DB17 /* ArmageddonV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6AB27F6232B00B2DB17 /* ArmageddonV.xcdatamodeld */; };
 		117FB6AF27F6232B00B2DB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117FB6AE27F6232B00B2DB17 /* Assets.xcassets */; };
@@ -21,10 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112EC1DC27F9C648009E6260 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		112EC1DF27F9CB3F009E6260 /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
+		112EC1E027F9CB3F009E6260 /* AsteroidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AsteroidCell.xib; sourceTree = "<group>"; };
 		117FB69F27F6232B00B2DB17 /* ArmageddonV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmageddonV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FB6A227F6232B00B2DB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117FB6A427F6232B00B2DB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		117FB6A627F6232B00B2DB17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		117FB6A627F6232B00B2DB17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		117FB6A927F6232B00B2DB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		117FB6AC27F6232B00B2DB17 /* ArmageddonV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArmageddonV.xcdatamodel; sourceTree = "<group>"; };
 		117FB6AE27F6232B00B2DB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +53,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112EC1DA27F9C413009E6260 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				117FB6A627F6232B00B2DB17 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		112EC1DB27F9C625009E6260 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				117FB6BD27F6337400B2DB17 /* JSONParsing.swift */,
+				117FB6B927F62CF800B2DB17 /* NetworkManager.swift */,
+				112EC1DC27F9C648009E6260 /* DataManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		112EC1DE27F9CB20009E6260 /* AsteroidCell */ = {
+			isa = PBXGroup;
+			children = (
+				112EC1DF27F9CB3F009E6260 /* AsteroidCell.swift */,
+				112EC1E027F9CB3F009E6260 /* AsteroidCell.xib */,
+			);
+			path = AsteroidCell;
+			sourceTree = "<group>";
+		};
 		117FB69627F6232B00B2DB17 = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +99,17 @@
 		117FB6A127F6232B00B2DB17 /* ArmageddonV */ = {
 			isa = PBXGroup;
 			children = (
+				112EC1DE27F9CB20009E6260 /* AsteroidCell */,
+				112EC1DB27F9C625009E6260 /* Utils */,
+				112EC1DA27F9C413009E6260 /* Controllers */,
 				117FB6A227F6232B00B2DB17 /* AppDelegate.swift */,
 				117FB6A427F6232B00B2DB17 /* SceneDelegate.swift */,
-				117FB6A627F6232B00B2DB17 /* ViewController.swift */,
 				117FB6A827F6232B00B2DB17 /* Main.storyboard */,
 				117FB6AE27F6232B00B2DB17 /* Assets.xcassets */,
 				117FB6B027F6232B00B2DB17 /* LaunchScreen.storyboard */,
 				117FB6B327F6232B00B2DB17 /* Info.plist */,
 				117FB6AB27F6232B00B2DB17 /* ArmageddonV.xcdatamodeld */,
-				117FB6B927F62CF800B2DB17 /* NetworkManager.swift */,
 				117FB6BB27F6303300B2DB17 /* Asteroid.swift */,
-				117FB6BD27F6337400B2DB17 /* JSONParsing.swift */,
 				117FB6C127F8EF9500B2DB17 /* Convergence.swift */,
 			);
 			path = ArmageddonV;
@@ -140,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112EC1E227F9CB3F009E6260 /* AsteroidCell.xib in Resources */,
 				117FB6B227F6232B00B2DB17 /* LaunchScreen.storyboard in Resources */,
 				117FB6AF27F6232B00B2DB17 /* Assets.xcassets in Resources */,
 				117FB6AA27F6232B00B2DB17 /* Main.storyboard in Resources */,
@@ -154,12 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				117FB6AD27F6232B00B2DB17 /* ArmageddonV.xcdatamodeld in Sources */,
-				117FB6A727F6232B00B2DB17 /* ViewController.swift in Sources */,
+				117FB6A727F6232B00B2DB17 /* HomeViewController.swift in Sources */,
+				112EC1E127F9CB3F009E6260 /* AsteroidCell.swift in Sources */,
 				117FB6BA27F62CF800B2DB17 /* NetworkManager.swift in Sources */,
 				117FB6C227F8EF9500B2DB17 /* Convergence.swift in Sources */,
 				117FB6A327F6232B00B2DB17 /* AppDelegate.swift in Sources */,
 				117FB6BC27F6303300B2DB17 /* Asteroid.swift in Sources */,
 				117FB6A527F6232B00B2DB17 /* SceneDelegate.swift in Sources */,
+				112EC1DD27F9C648009E6260 /* DataManager.swift in Sources */,
 				117FB6BE27F6337400B2DB17 /* JSONParsing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

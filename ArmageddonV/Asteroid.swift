@@ -9,12 +9,14 @@ import Foundation
 
 class Asteroid {
     
+    let id: Int
     let name: String
     let size: Int
     let dangerous: Bool
     let convergences: [Convergence]
     
-    init(name: String, size: Int, dangerous: Bool, convergences: [Convergence]) {
+    init(id: Int, name: String, size: Int, dangerous: Bool, convergences: [Convergence]) {
+        self.id = id
         self.name = name
         self.size = size
         self.dangerous = dangerous
