@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var typeOfCollectionSlider: UISegmentedControl!
     @IBOutlet weak var onlyDangerousButton: UISwitch!
     @IBOutlet weak var distanceTypeButton: UIButton!
+    @IBOutlet weak var bruceButton: UIButton!
     
     var typeOfCollection = typeCollection.all
     
@@ -56,6 +57,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func typeOfCollectionSliderAction(_ sender: UISegmentedControl) {
+        asteroidsCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .top, animated: false)
+        bruceButton.isHidden = sender.selectedSegmentIndex == 0
         typeOfCollection = sender.selectedSegmentIndex == 0 ? .all : .forDestroy
         asteroidsCollectionView.reloadData()
     }
@@ -66,7 +69,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func distanceTypeButtonAction(_ sender: Any) {
-        let choiceOfDistanceType = UIAlertController(title: "Выберите еденицу измерения", message: nil, preferredStyle: .alert)
+        let choiceOfDistanceType = UIAlertController(title: "Выберите единицу измерения", message: nil, preferredStyle: .alert)
         choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.asteroidsCollectionView.reloadData() }))
         choiceOfDistanceType.addAction(UIAlertAction(title: "В расстояниях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.asteroidsCollectionView.reloadData() }))
         present(choiceOfDistanceType, animated: true, completion: nil)

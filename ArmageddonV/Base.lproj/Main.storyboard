@@ -95,6 +95,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yn-Ll-UvR">
+                                <rect key="frame" x="15" y="783" width="384" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вызвать бригаду им. Брюса Уиллеса">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,6 +116,7 @@
                             <constraint firstItem="G5U-aI-ICF" firstAttribute="top" secondItem="gn6-KR-NyB" secondAttribute="bottom" constant="15" id="3DX-0f-th5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wf-oJ-SdO" secondAttribute="trailing" constant="15" id="6sW-e8-npI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CgA-AR-LVd" secondAttribute="bottom" id="DhR-p0-E4v"/>
+                            <constraint firstItem="9Yn-Ll-UvR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IDO-7G-VnU"/>
                             <constraint firstItem="GmK-DV-QpO" firstAttribute="top" secondItem="5wf-oJ-SdO" secondAttribute="bottom" constant="15" id="ITA-KN-L9j"/>
                             <constraint firstItem="gn6-KR-NyB" firstAttribute="top" secondItem="GmK-DV-QpO" secondAttribute="bottom" constant="15" id="Lxx-xh-fwL"/>
                             <constraint firstItem="GmK-DV-QpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="MpI-yL-9Wb"/>
@@ -113,15 +127,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CgA-AR-LVd" secondAttribute="trailing" id="cbT-eF-SAv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GmK-DV-QpO" secondAttribute="trailing" constant="15" id="cd2-yV-SOs"/>
                             <constraint firstItem="CgA-AR-LVd" firstAttribute="top" secondItem="4nf-HC-05E" secondAttribute="bottom" constant="15" id="jXN-7L-rWa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Yn-Ll-UvR" secondAttribute="trailing" constant="15" id="m0Y-Vk-KH0"/>
                             <constraint firstItem="G5U-aI-ICF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="nXq-d3-4zn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gn6-KR-NyB" secondAttribute="trailing" constant="15" id="obX-qt-tLo"/>
                             <constraint firstItem="gn6-KR-NyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="pE6-6e-5af"/>
                             <constraint firstItem="4nf-HC-05E" firstAttribute="top" secondItem="G5U-aI-ICF" secondAttribute="bottom" constant="15" id="pJi-aP-BeS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Yn-Ll-UvR" secondAttribute="bottom" constant="5" id="pLD-ew-UB7"/>
                             <constraint firstItem="5wf-oJ-SdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rHt-LE-Jml"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="asteroidsCollectionView" destination="CgA-AR-LVd" id="LcP-27-fMo"/>
+                        <outlet property="bruceButton" destination="9Yn-Ll-UvR" id="CVd-te-5XD"/>
                         <outlet property="distanceTypeButton" destination="5C4-q1-F4B" id="X8y-al-kJB"/>
                         <outlet property="onlyDangerousButton" destination="MrS-sR-dFR" id="AE4-Nc-q4e"/>
                         <outlet property="typeOfCollectionSlider" destination="gn6-KR-NyB" id="wrg-fM-ntp"/>
