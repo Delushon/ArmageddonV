@@ -80,6 +80,13 @@
 			path = AsteroidCell;
 			sourceTree = "<group>";
 		};
+		112EC1E327FA4722009E6260 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		117FB69627F6232B00B2DB17 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +118,7 @@
 				117FB6AB27F6232B00B2DB17 /* ArmageddonV.xcdatamodeld */,
 				117FB6BB27F6303300B2DB17 /* Asteroid.swift */,
 				117FB6C127F8EF9500B2DB17 /* Convergence.swift */,
+				112EC1E327FA4722009E6260 /* Entities */,
 			);
 			path = ArmageddonV;
 			sourceTree = "<group>";

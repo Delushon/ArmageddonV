@@ -19,6 +19,7 @@ class NetworkManager {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                         DataManager.asteroids.append(contentsOf: JSONParsing.getAsteroidsFromJSON(json))
+                        NotificationCenter.default.post(name: NSNotification.Name("ReloadAsteroids"), object: nil)
                     } catch {
                         print(error)
                     }

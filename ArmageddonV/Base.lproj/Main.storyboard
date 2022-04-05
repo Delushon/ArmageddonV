@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-AR-LVd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="314" width="414" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XSX-qZ-2Ac">
                                     <size key="itemSize" width="128" height="128"/>
@@ -37,23 +37,99 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARMAGEDDON V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wf-oJ-SdO">
+                                <rect key="frame" x="15" y="44" width="384" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервис мониторинга и уничтожения астероидов, опасно подлетающих к Земле." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-DV-QpO">
+                                <rect key="frame" x="15" y="92.5" width="384" height="68.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gn6-KR-NyB">
+                                <rect key="frame" x="15" y="176" width="384" height="32"/>
+                                <segments>
+                                    <segment title="Астероиды"/>
+                                    <segment title="Уничтожение"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeOfCollectionSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="BVY-WR-Qvc"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-aI-ICF">
+                                <rect key="frame" x="15" y="222" width="384" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Только опасные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-qf-how">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-sR-dFR">
+                                        <rect key="frame" x="335" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onlyDangerousButtonAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="UFe-xd-2Qx"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-HC-05E">
+                                <rect key="frame" x="15" y="268" width="384" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расстояние" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if5-Lh-9CA">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C4-q1-F4B">
+                                        <rect key="frame" x="183" y="0.0" width="201" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="В километрах"/>
+                                        <connections>
+                                            <action selector="distanceTypeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFC-Vi-rko"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4nf-HC-05E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="37v-Ni-FYv"/>
+                            <constraint firstItem="G5U-aI-ICF" firstAttribute="top" secondItem="gn6-KR-NyB" secondAttribute="bottom" constant="15" id="3DX-0f-th5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wf-oJ-SdO" secondAttribute="trailing" constant="15" id="6sW-e8-npI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CgA-AR-LVd" secondAttribute="bottom" id="DhR-p0-E4v"/>
+                            <constraint firstItem="GmK-DV-QpO" firstAttribute="top" secondItem="5wf-oJ-SdO" secondAttribute="bottom" constant="15" id="ITA-KN-L9j"/>
+                            <constraint firstItem="gn6-KR-NyB" firstAttribute="top" secondItem="GmK-DV-QpO" secondAttribute="bottom" constant="15" id="Lxx-xh-fwL"/>
+                            <constraint firstItem="GmK-DV-QpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="MpI-yL-9Wb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nf-HC-05E" secondAttribute="trailing" constant="15" id="Wm8-WN-mbD"/>
                             <constraint firstItem="CgA-AR-LVd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XCW-sR-nxI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G5U-aI-ICF" secondAttribute="trailing" constant="15" id="ZSY-eT-2ZL"/>
+                            <constraint firstItem="5wf-oJ-SdO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ayk-Mw-fMm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CgA-AR-LVd" secondAttribute="trailing" id="cbT-eF-SAv"/>
-                            <constraint firstItem="CgA-AR-LVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hRJ-ja-nCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GmK-DV-QpO" secondAttribute="trailing" constant="15" id="cd2-yV-SOs"/>
+                            <constraint firstItem="CgA-AR-LVd" firstAttribute="top" secondItem="4nf-HC-05E" secondAttribute="bottom" constant="15" id="jXN-7L-rWa"/>
+                            <constraint firstItem="G5U-aI-ICF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="nXq-d3-4zn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gn6-KR-NyB" secondAttribute="trailing" constant="15" id="obX-qt-tLo"/>
+                            <constraint firstItem="gn6-KR-NyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="pE6-6e-5af"/>
+                            <constraint firstItem="4nf-HC-05E" firstAttribute="top" secondItem="G5U-aI-ICF" secondAttribute="bottom" constant="15" id="pJi-aP-BeS"/>
+                            <constraint firstItem="5wf-oJ-SdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rHt-LE-Jml"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="asteroidsCollectionView" destination="CgA-AR-LVd" id="LcP-27-fMo"/>
+                        <outlet property="distanceTypeButton" destination="5C4-q1-F4B" id="X8y-al-kJB"/>
+                        <outlet property="onlyDangerousButton" destination="MrS-sR-dFR" id="AE4-Nc-q4e"/>
+                        <outlet property="typeOfCollectionSlider" destination="gn6-KR-NyB" id="wrg-fM-ntp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>

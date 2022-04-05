@@ -7,7 +7,10 @@
 
 import Foundation
 
-class Asteroid {
+class Asteroid: Equatable {
+    static func == (lhs: Asteroid, rhs: Asteroid) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     let id: Int
     let name: String
@@ -22,5 +25,7 @@ class Asteroid {
         self.dangerous = dangerous
         self.convergences = convergences
     }
+    
+    
     
 }
