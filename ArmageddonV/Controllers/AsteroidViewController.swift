@@ -26,8 +26,8 @@ class AsteroidViewController: UIViewController {
     
     @IBAction func distanceTypeButtonAction(_ sender: UIButton) {
         let choiceOfDistanceType = UIAlertController(title: "Выберите единицу измерения", message: nil, preferredStyle: .alert)
-        choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.convergencesCollectionView.reloadData() }))
-        choiceOfDistanceType.addAction(UIAlertAction(title: "В расстояниях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.convergencesCollectionView.reloadData() }))
+        choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.convergencesCollectionView.reloadData(); sender.titleLabel?.text = "В километрах" }))
+        choiceOfDistanceType.addAction(UIAlertAction(title: "В расстояниях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.convergencesCollectionView.reloadData(); sender.titleLabel?.text = "В дистанциях" }))
         present(choiceOfDistanceType, animated: true, completion: nil)
     }
     

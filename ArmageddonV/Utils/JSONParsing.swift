@@ -22,7 +22,7 @@ class JSONParsing {
                 for asteroid in date.value as! [[String: Any]] {
                     
                     let id = Int(asteroid["id"] as! String)!
-                    let name = asteroid["name"] as! String
+                    let name = ((asteroid["name"] as! String).components(separatedBy: "(").last?.components(separatedBy: ")").first) ?? asteroid["name"] as! String
                     let size = (((asteroid["estimated_diameter"] as! [String: Any])["meters"] as! [String: Any])["estimated_diameter_max"] as! NSNumber).intValue
                     let dangerous = asteroid["is_potentially_hazardous_asteroid"] as! Bool
                     

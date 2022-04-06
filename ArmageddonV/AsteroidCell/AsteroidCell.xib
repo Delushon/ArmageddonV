@@ -23,14 +23,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-JN-Y6g">
                                 <rect key="frame" x="0.0" y="0.0" width="582" height="285"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AKf-jc-VQZ">
-                                        <rect key="frame" x="10" y="118" width="114" height="113"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asteroid" translatesAutoresizingMaskIntoConstraints="NO" id="AKf-jc-VQZ">
+                                        <rect key="frame" x="37" y="154.5" width="62" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="AKf-jc-VQZ" secondAttribute="height" multiplier="1:1" id="3tw-RE-1zf"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-YF-XHs">
-                                        <rect key="frame" x="501" y="206" width="71" height="67"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dino" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-YF-XHs">
+                                        <rect key="frame" x="515" y="218" width="57" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dWM-YF-XHs" secondAttribute="height" id="BYU-da-0k7"/>
                                         </constraints>
@@ -44,14 +44,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="CX3-Gr-FuE"/>
                                     <constraint firstAttribute="bottom" secondItem="dWM-YF-XHs" secondAttribute="bottom" constant="10" id="ENR-nH-JIE"/>
-                                    <constraint firstItem="AKf-jc-VQZ" firstAttribute="height" secondItem="zpF-JN-Y6g" secondAttribute="height" multiplier="0.4" id="TaN-kf-gsN"/>
-                                    <constraint firstItem="AKf-jc-VQZ" firstAttribute="leading" secondItem="zpF-JN-Y6g" secondAttribute="leading" constant="10" id="bCg-ks-Pd2"/>
                                     <constraint firstAttribute="bottom" secondItem="t3Z-TJ-qyD" secondAttribute="bottom" constant="10" id="pNA-Oy-f3q"/>
-                                    <constraint firstItem="t3Z-TJ-qyD" firstAttribute="top" secondItem="AKf-jc-VQZ" secondAttribute="bottom" constant="10" id="phe-gB-3dP"/>
+                                    <constraint firstItem="t3Z-TJ-qyD" firstAttribute="top" secondItem="AKf-jc-VQZ" secondAttribute="bottom" constant="25" id="phe-gB-3dP"/>
+                                    <constraint firstItem="AKf-jc-VQZ" firstAttribute="centerX" secondItem="t3Z-TJ-qyD" secondAttribute="centerX" id="rPa-Y5-J1Q"/>
                                     <constraint firstAttribute="trailing" secondItem="dWM-YF-XHs" secondAttribute="trailing" constant="10" id="rTG-ss-lim"/>
                                     <constraint firstItem="t3Z-TJ-qyD" firstAttribute="leading" secondItem="zpF-JN-Y6g" secondAttribute="leading" constant="10" id="tb2-GD-ACG"/>
-                                    <constraint firstItem="dWM-YF-XHs" firstAttribute="height" secondItem="zpF-JN-Y6g" secondAttribute="height" multiplier="0.25" id="xB8-tN-cE8"/>
+                                    <constraint firstItem="dWM-YF-XHs" firstAttribute="height" secondItem="zpF-JN-Y6g" secondAttribute="height" multiplier="0.2" id="xB8-tN-cE8"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nl2-Ba-ANF">
@@ -76,7 +76,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nA2-qb-P2a">
-                                <rect key="frame" x="10" y="481" width="562" height="23"/>
+                                <rect key="frame" x="10" y="481.5" width="562" height="23"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7U-EQ-8fr">
                                         <rect key="frame" x="0.0" y="0.0" width="472.5" height="23"/>
@@ -168,7 +168,6 @@
                             <constraint firstAttribute="trailing" secondItem="Nl2-Ba-ANF" secondAttribute="trailing" constant="10" id="bYF-xk-5Uz"/>
                             <constraint firstAttribute="trailing" secondItem="7sA-VH-QMm" secondAttribute="trailing" constant="10" id="dbd-CP-NU0"/>
                             <constraint firstItem="Nl2-Ba-ANF" firstAttribute="leading" secondItem="vn1-G1-Q5g" secondAttribute="leading" constant="10" id="g9w-0y-Rnu"/>
-                            <constraint firstItem="zpF-JN-Y6g" firstAttribute="height" secondItem="vn1-G1-Q5g" secondAttribute="height" multiplier="0.35" id="hgi-6r-ZpR"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -195,8 +194,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <image name="asteroid" width="61" height="62"/>
+        <image name="dino" width="35" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

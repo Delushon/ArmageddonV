@@ -71,8 +71,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func distanceTypeButtonAction(_ sender: UIButton) {
         let choiceOfDistanceType = UIAlertController(title: "Выберите единицу измерения", message: nil, preferredStyle: .alert)
-        choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.asteroidsCollectionView.reloadData() }))
-        choiceOfDistanceType.addAction(UIAlertAction(title: "В расстояниях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.asteroidsCollectionView.reloadData() }))
+        choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.asteroidsCollectionView.reloadData(); sender.titleLabel?.text = "В километрах" }))
+        choiceOfDistanceType.addAction(UIAlertAction(title: "В дистанциях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.asteroidsCollectionView.reloadData(); sender.titleLabel?.text = "В дистанциях" }))
         present(choiceOfDistanceType, animated: true, completion: nil)
     }
     
@@ -103,7 +103,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     func setupCell(cell: AsteroidCell, asteroid: Asteroid) {
         cell.setGradientBackground(dangerous: asteroid.dangerous)
-        cell.nameLabel.text = asteroid.name
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.16
+        cell.nameLabel.attributedText = NSMutableAttributedString(string: asteroid.name, attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        cell.asteroidImage.image? = (cell.asteroidImage.image?.resize(maxWidthHeight: 150.0 * (Double(asteroid.size) / 85.0))) ?? cell.asteroidImage.image!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM YYYY"
         let convergence = asteroid.convergences[0]
@@ -170,3 +174,33 @@ extension Array where Element == Asteroid {
     }
 }
 
+extension UIImage {
+
+    func resize(maxWidthHeight : Double)-> UIImage? {
+
+        let actualHeight = Double(size.height)
+        let actualWidth = Double(size.width)
+        var maxWidth = 0.0
+        var maxHeight = 0.0
+
+        if actualWidth > actualHeight {
+            maxWidth = maxWidthHeight
+            let per = (100.0 * maxWidthHeight / actualWidth)
+            maxHeight = (actualHeight * per) / 100.0
+        }else{
+            maxHeight = maxWidthHeight
+            let per = (100.0 * maxWidthHeight / actualHeight)
+            maxWidth = (actualWidth * per) / 100.0
+        }
+
+        let hasAlpha = true
+        let scale: CGFloat = 0.0
+
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: maxWidth, height: maxHeight), !hasAlpha, scale)
+        self.draw(in: CGRect(origin: .zero, size: CGSize(width: maxWidth, height: maxHeight)))
+
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
+    }
+
+}
