@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bE7-i7-U49">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7eD-TV-h2Y">
+            <objects>
+                <navigationController id="bE7-i7-U49" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xda-V9-4zD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="np9-gw-qfW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1be-jq-4Db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828" y="117"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-AR-LVd">
-                                <rect key="frame" x="0.0" y="314" width="414" height="548"/>
+                                <rect key="frame" x="0.0" y="358" width="414" height="504"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XSX-qZ-2Ac">
                                     <size key="itemSize" width="128" height="128"/>
@@ -38,19 +54,19 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARMAGEDDON V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wf-oJ-SdO">
-                                <rect key="frame" x="15" y="44" width="384" height="33.5"/>
+                                <rect key="frame" x="15" y="88" width="384" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервис мониторинга и уничтожения астероидов, опасно подлетающих к Земле." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-DV-QpO">
-                                <rect key="frame" x="15" y="92.5" width="384" height="68.5"/>
+                                <rect key="frame" x="15" y="136.5" width="384" height="68.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gn6-KR-NyB">
-                                <rect key="frame" x="15" y="176" width="384" height="32"/>
+                                <rect key="frame" x="15" y="220" width="384" height="32"/>
                                 <segments>
                                     <segment title="Астероиды"/>
                                     <segment title="Уничтожение"/>
@@ -60,7 +76,7 @@
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-aI-ICF">
-                                <rect key="frame" x="15" y="222" width="384" height="31"/>
+                                <rect key="frame" x="15" y="266" width="384" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Только опасные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-qf-how">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="31"/>
@@ -77,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-HC-05E">
-                                <rect key="frame" x="15" y="268" width="384" height="31"/>
+                                <rect key="frame" x="15" y="312" width="384" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расстояние" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if5-Lh-9CA">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="31"/>
@@ -136,17 +152,91 @@
                             <constraint firstItem="5wf-oJ-SdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rHt-LE-Jml"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zs6-OE-leG">
+                        <barButtonItem key="backBarButtonItem" title="Все" id="nxg-iE-7hk"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="asteroidsCollectionView" destination="CgA-AR-LVd" id="LcP-27-fMo"/>
                         <outlet property="bruceButton" destination="9Yn-Ll-UvR" id="CVd-te-5XD"/>
                         <outlet property="distanceTypeButton" destination="5C4-q1-F4B" id="X8y-al-kJB"/>
                         <outlet property="onlyDangerousButton" destination="MrS-sR-dFR" id="AE4-Nc-q4e"/>
                         <outlet property="typeOfCollectionSlider" destination="gn6-KR-NyB" id="wrg-fM-ntp"/>
+                        <segue destination="ACg-eS-tHE" kind="show" identifier="toAsteroid" id="ubW-ZT-T6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+        <!--NAME-->
+        <scene sceneID="8WK-67-upp">
+            <objects>
+                <viewController id="ACg-eS-tHE" customClass="AsteroidViewController" customModule="ArmageddonV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5zK-Uq-TwK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qxd-YL-Kvr">
+                                <rect key="frame" x="0.0" y="149" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iTR-bB-2F1">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zVF-Vp-YJ8">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bMK-Hv-grI">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="ycO-jh-M2k">
+                                <rect key="frame" x="15" y="103" width="384" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расстояние" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaG-Dh-MjJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYT-SJ-0hE">
+                                        <rect key="frame" x="183" y="0.0" width="201" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="В километрах"/>
+                                        <connections>
+                                            <action selector="distanceTypeButtonAction:" destination="ACg-eS-tHE" eventType="touchUpInside" id="F08-ZE-5Ya"/>
+                                            <action selector="distanceTypeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPm-SF-rBn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kch-8a-PTB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qxd-YL-Kvr" firstAttribute="top" secondItem="ycO-jh-M2k" secondAttribute="bottom" constant="15" id="8g6-gU-drL"/>
+                            <constraint firstItem="ycO-jh-M2k" firstAttribute="leading" secondItem="5zK-Uq-TwK" secondAttribute="leading" constant="15" id="Bha-1g-DxR"/>
+                            <constraint firstItem="kch-8a-PTB" firstAttribute="trailing" secondItem="Qxd-YL-Kvr" secondAttribute="trailing" id="P23-T4-GHa"/>
+                            <constraint firstItem="Qxd-YL-Kvr" firstAttribute="leading" secondItem="kch-8a-PTB" secondAttribute="leading" id="YsV-nM-Kuv"/>
+                            <constraint firstItem="ycO-jh-M2k" firstAttribute="top" secondItem="kch-8a-PTB" secondAttribute="top" constant="15" id="cKT-Lm-Nmo"/>
+                            <constraint firstItem="kch-8a-PTB" firstAttribute="bottom" secondItem="Qxd-YL-Kvr" secondAttribute="bottom" id="rxo-48-T4C"/>
+                            <constraint firstItem="kch-8a-PTB" firstAttribute="trailing" secondItem="ycO-jh-M2k" secondAttribute="trailing" constant="15" id="w4H-OR-NFg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NAME" id="JZo-DJ-CRr"/>
+                    <connections>
+                        <outlet property="convergencesCollectionView" destination="Qxd-YL-Kvr" id="Vqm-Pg-Odl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeV-0M-R4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882.608695652174" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>

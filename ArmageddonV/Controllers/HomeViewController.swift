@@ -19,40 +19,41 @@ class HomeViewController: UIViewController {
     
     var onlyDangerous = false
     
-    var typeOfDistance = typeDistance.km
+    var typeOfDistance = TypeDistance.km
+    
+    var selectedAsteroid: Asteroid!
         
     enum typeCollection {
         case all
         case forDestroy
     }
     
-    enum typeDistance: Int {
-        case km = 1
-        case lunar = 384400
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         asteroidsCollectionView.delegate = self
         asteroidsCollectionView.dataSource = self
         asteroidsCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         asteroidsCollectionView.register(UINib(nibName: "AsteroidCell", bundle: nil), forCellWithReuseIdentifier: "AsteroidCell")
-        NetworkManager.getAsteroids(startDate: Date(), endDate: Date())
+        NetworkManager.getAsteroids()
         DataManager.initAsteroidsForDestroy()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadAsteroids(_:)), name: NSNotification.Name("ReloadAsteroids"), object: nil)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("ReloadAsteroids"), object: nil)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @objc func reloadAsteroids(_ notification: Notification?) {
         DispatchQueue.main.async {
             self.asteroidsCollectionView.reloadData()
+            self.removeSpinner()
         }
     }
     
@@ -68,7 +69,7 @@ class HomeViewController: UIViewController {
         asteroidsCollectionView.reloadData()
     }
     
-    @IBAction func distanceTypeButtonAction(_ sender: Any) {
+    @IBAction func distanceTypeButtonAction(_ sender: UIButton) {
         let choiceOfDistanceType = UIAlertController(title: "Выберите единицу измерения", message: nil, preferredStyle: .alert)
         choiceOfDistanceType.addAction(UIAlertAction(title: "Километры", style: .default, handler: { _ in self.typeOfDistance = .km; self.asteroidsCollectionView.reloadData() }))
         choiceOfDistanceType.addAction(UIAlertAction(title: "В расстояниях до луны", style: .default, handler: { _ in self.typeOfDistance = .lunar; self.asteroidsCollectionView.reloadData() }))
@@ -101,6 +102,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
         
     func setupCell(cell: AsteroidCell, asteroid: Asteroid) {
+        cell.setGradientBackground(dangerous: asteroid.dangerous)
         cell.nameLabel.text = asteroid.name
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM YYYY"
@@ -126,7 +128,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width * 0.9, height: 600)//UIScreen.main.bounds.height * 0.7)
+        return CGSize(width: UIScreen.main.bounds.width * 0.9, height: 700)//UIScreen.main.bounds.height * 0.7)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -134,7 +136,23 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch typeOfCollection {
+            case .all: selectedAsteroid = DataManager.asteroids.prepare(onlyDangerous: onlyDangerous)[indexPath.item]
+            case .forDestroy: selectedAsteroid = DataManager.getAsteroidsForDestroy().prepare(onlyDangerous: onlyDangerous)[indexPath.item]
+        }
         performSegue(withIdentifier: "toAsteroid", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? AsteroidViewController else { return }
+        destination.asteroid = selectedAsteroid
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
+            showSpinner()
+            NetworkManager.getAsteroids()
+        }
     }
     
     

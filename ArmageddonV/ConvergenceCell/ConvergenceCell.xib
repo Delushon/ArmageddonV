@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ConvergenceCell" customModule="ArmageddonV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="329"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="329"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="aA0-77-nHQ">
+                        <rect key="frame" x="0.0" y="15" width="478" height="299"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g03-YZ-hEG">
+                                <rect key="frame" x="209.5" y="0.0" width="59.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIV-R7-vzX">
+                                <rect key="frame" x="10" y="97.5" width="458" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-6n-twT">
+                                        <rect key="frame" x="0.0" y="0.0" width="368.5" height="23"/>
+                                        <string key="text">Расстояние...................................................................................................................................................</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DISTANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-RZ-x4R">
+                                        <rect key="frame" x="368.5" y="0.0" width="89.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cOk-RZ-x4R" secondAttribute="trailing" id="djG-xl-Dix"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXC-T8-7bc">
+                                <rect key="frame" x="10" y="188" width="458" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-zQ-am2">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="23"/>
+                                        <string key="text">Скорость..................................................................................................................................................</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SPEED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9Z-Zb-jcK">
+                                        <rect key="frame" x="400" y="0.0" width="58" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s9Z-Zb-jcK" secondAttribute="trailing" id="2A4-dX-NZC"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-uw-IVl">
+                                <rect key="frame" x="10" y="278.5" width="458" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-4f-rbd">
+                                        <rect key="frame" x="0.0" y="0.0" width="409" height="20.5"/>
+                                        <string key="text">Орбита..................................................................................................................................................</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ORBIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv1-Ne-lXo">
+                                        <rect key="frame" x="409" y="0.0" width="49" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Rv1-Ne-lXo" secondAttribute="trailing" id="yDS-Om-Wzm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lVD-uw-IVl" secondAttribute="trailing" constant="10" id="B9c-yd-ej7"/>
+                            <constraint firstAttribute="trailing" secondItem="jIV-R7-vzX" secondAttribute="trailing" constant="10" id="Din-jg-GpD"/>
+                            <constraint firstItem="lVD-uw-IVl" firstAttribute="leading" secondItem="aA0-77-nHQ" secondAttribute="leading" constant="10" id="V0i-6u-SiB"/>
+                            <constraint firstAttribute="trailing" secondItem="gXC-T8-7bc" secondAttribute="trailing" constant="10" id="oRc-BO-Zpa"/>
+                            <constraint firstItem="gXC-T8-7bc" firstAttribute="leading" secondItem="aA0-77-nHQ" secondAttribute="leading" constant="10" id="pQC-MU-DN9"/>
+                            <constraint firstItem="jIV-R7-vzX" firstAttribute="leading" secondItem="aA0-77-nHQ" secondAttribute="leading" constant="10" id="x2V-l5-IGs"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="aA0-77-nHQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="NQF-Eu-3m9"/>
+                <constraint firstAttribute="bottom" secondItem="aA0-77-nHQ" secondAttribute="bottom" constant="15" id="NXi-98-MXf"/>
+                <constraint firstAttribute="trailing" secondItem="aA0-77-nHQ" secondAttribute="trailing" id="W4g-6B-8Sk"/>
+                <constraint firstItem="aA0-77-nHQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZUq-50-Avj"/>
+            </constraints>
+            <size key="customSize" width="478" height="329"/>
+            <connections>
+                <outlet property="dateLabel" destination="g03-YZ-hEG" id="w16-7N-aWg"/>
+                <outlet property="distanceLabel" destination="cOk-RZ-x4R" id="tzZ-ex-V5g"/>
+                <outlet property="orbitLabel" destination="Rv1-Ne-lXo" id="2Oz-0c-ggg"/>
+                <outlet property="speedLabel" destination="s9Z-Zb-jcK" id="drh-LK-SEj"/>
+            </connections>
+            <point key="canvasLocation" x="384.05797101449281" y="398.77232142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

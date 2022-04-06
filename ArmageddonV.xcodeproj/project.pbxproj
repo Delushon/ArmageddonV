@@ -10,6 +10,11 @@
 		112EC1DD27F9C648009E6260 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1DC27F9C648009E6260 /* DataManager.swift */; };
 		112EC1E127F9CB3F009E6260 /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1DF27F9CB3F009E6260 /* AsteroidCell.swift */; };
 		112EC1E227F9CB3F009E6260 /* AsteroidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112EC1E027F9CB3F009E6260 /* AsteroidCell.xib */; };
+		112EC1F727FDDC59009E6260 /* AsteroidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1F627FDDC59009E6260 /* AsteroidViewController.swift */; };
+		112EC1FB27FDE5D4009E6260 /* ConvergenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1F927FDE5D4009E6260 /* ConvergenceCell.swift */; };
+		112EC1FC27FDE5D4009E6260 /* ConvergenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112EC1FA27FDE5D4009E6260 /* ConvergenceCell.xib */; };
+		112EC20027FDEAE3009E6260 /* TypeDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC1FF27FDEAE3009E6260 /* TypeDistance.swift */; };
+		112EC20227FDFAF5009E6260 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EC20127FDFAF5009E6260 /* Loading.swift */; };
 		117FB6A327F6232B00B2DB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A227F6232B00B2DB17 /* AppDelegate.swift */; };
 		117FB6A527F6232B00B2DB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A427F6232B00B2DB17 /* SceneDelegate.swift */; };
 		117FB6A727F6232B00B2DB17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FB6A627F6232B00B2DB17 /* HomeViewController.swift */; };
@@ -27,6 +32,11 @@
 		112EC1DC27F9C648009E6260 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		112EC1DF27F9CB3F009E6260 /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
 		112EC1E027F9CB3F009E6260 /* AsteroidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AsteroidCell.xib; sourceTree = "<group>"; };
+		112EC1F627FDDC59009E6260 /* AsteroidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewController.swift; sourceTree = "<group>"; };
+		112EC1F927FDE5D4009E6260 /* ConvergenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvergenceCell.swift; sourceTree = "<group>"; };
+		112EC1FA27FDE5D4009E6260 /* ConvergenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConvergenceCell.xib; sourceTree = "<group>"; };
+		112EC1FF27FDEAE3009E6260 /* TypeDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDistance.swift; sourceTree = "<group>"; };
+		112EC20127FDFAF5009E6260 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		117FB69F27F6232B00B2DB17 /* ArmageddonV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmageddonV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FB6A227F6232B00B2DB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117FB6A427F6232B00B2DB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				117FB6A627F6232B00B2DB17 /* HomeViewController.swift */,
+				112EC1F627FDDC59009E6260 /* AsteroidViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -67,6 +78,8 @@
 				117FB6BD27F6337400B2DB17 /* JSONParsing.swift */,
 				117FB6B927F62CF800B2DB17 /* NetworkManager.swift */,
 				112EC1DC27F9C648009E6260 /* DataManager.swift */,
+				112EC20127FDFAF5009E6260 /* Loading.swift */,
+				112EC1FF27FDEAE3009E6260 /* TypeDistance.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -85,6 +98,15 @@
 			children = (
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		112EC1F827FDE5B7009E6260 /* ConvergenceCell */ = {
+			isa = PBXGroup;
+			children = (
+				112EC1F927FDE5D4009E6260 /* ConvergenceCell.swift */,
+				112EC1FA27FDE5D4009E6260 /* ConvergenceCell.xib */,
+			);
+			path = ConvergenceCell;
 			sourceTree = "<group>";
 		};
 		117FB69627F6232B00B2DB17 = {
@@ -106,6 +128,7 @@
 		117FB6A127F6232B00B2DB17 /* ArmageddonV */ = {
 			isa = PBXGroup;
 			children = (
+				112EC1F827FDE5B7009E6260 /* ConvergenceCell */,
 				112EC1DE27F9CB20009E6260 /* AsteroidCell */,
 				112EC1DB27F9C625009E6260 /* Utils */,
 				112EC1DA27F9C413009E6260 /* Controllers */,
@@ -185,6 +208,7 @@
 				117FB6B227F6232B00B2DB17 /* LaunchScreen.storyboard in Resources */,
 				117FB6AF27F6232B00B2DB17 /* Assets.xcassets in Resources */,
 				117FB6AA27F6232B00B2DB17 /* Main.storyboard in Resources */,
+				112EC1FC27FDE5D4009E6260 /* ConvergenceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +223,16 @@
 				117FB6A727F6232B00B2DB17 /* HomeViewController.swift in Sources */,
 				112EC1E127F9CB3F009E6260 /* AsteroidCell.swift in Sources */,
 				117FB6BA27F62CF800B2DB17 /* NetworkManager.swift in Sources */,
+				112EC20227FDFAF5009E6260 /* Loading.swift in Sources */,
+				112EC20027FDEAE3009E6260 /* TypeDistance.swift in Sources */,
 				117FB6C227F8EF9500B2DB17 /* Convergence.swift in Sources */,
 				117FB6A327F6232B00B2DB17 /* AppDelegate.swift in Sources */,
 				117FB6BC27F6303300B2DB17 /* Asteroid.swift in Sources */,
+				112EC1F727FDDC59009E6260 /* AsteroidViewController.swift in Sources */,
 				117FB6A527F6232B00B2DB17 /* SceneDelegate.swift in Sources */,
 				112EC1DD27F9C648009E6260 /* DataManager.swift in Sources */,
 				117FB6BE27F6337400B2DB17 /* JSONParsing.swift in Sources */,
+				112EC1FB27FDE5D4009E6260 /* ConvergenceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
